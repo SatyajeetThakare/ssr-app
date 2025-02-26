@@ -26,7 +26,6 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "src/assets/manifest.webmanifest",
               {
                 "glob": "**/*",
                 "input": "public"
@@ -40,7 +39,8 @@
             "prerender": true,
             "ssr": {
               "entry": "server.ts"
-            }
+            },
+            "serviceWorker": "ngsw-config.json"
           },
           "configurations": {
             "production": {
@@ -62,7 +62,8 @@
             "development": {
               "optimization": false,
               "extractLicenses": false,
-              "sourceMap": true
+              "sourceMap": true,
+              "serviceWorker": "ngsw-config.json"
             }
           },
           "defaultConfiguration": "production"
