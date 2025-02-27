@@ -1,14 +1,13 @@
 <div class="pwa-container">
     <h1 style="color: green">
-        Your First PWA!</h1> 
-    <!-- <h3>
-        PWA - Progressive Web Apps works same as any other web app, but can also be installed as any other native apps on mobile applications. <br>
-        When I say it behaves like native app, it can progress to work on offline, cache handling, push notifications etc.
-    </h3> -->
-    <!-- <p>Time
-        <b>{{TimeNow}}</b>
-    </p> -->
-    <p>
-        <b> {{msg}}!!</b>
-    </p>
+        My First PWA!</h1> <br>
+    <b>Hello BTS, {{ currentTime }} {{msg}}!!</b><br>
+    <h3 style="color: crimson;">How can you create your First PWA?</h3>
+    <ol>
+        <li>Run <code>ng add @angular/pwa</code></li>
+        <li>ngsw-config.json, manifest.webmanifest files will be created.</li>
+        <li>Setup the <code>ServiceWorker</code> cache config on angular.json</li>
+        <li>Add the ServiceWorker provider on main.ts</li>
+        <li>Build and test the PWA in production mode.</li>
+    </ol>
 </div>
