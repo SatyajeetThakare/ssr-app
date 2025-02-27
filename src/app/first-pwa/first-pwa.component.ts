@@ -17,7 +17,7 @@ export class FirstPwaComponent implements OnInit {
   ngOnInit() {
     this.setGreeting();
     this.getCurrentTime();
-    this.showAlertAfter10Minutes();
+    // this.showAlertAfter10Minutes();
   }
 
   setGreeting() {
@@ -35,10 +35,10 @@ export class FirstPwaComponent implements OnInit {
     this.currentTime = new Date().toLocaleTimeString();
   }
 
-  showAlertAfter10Minutes() {
-    setTimeout(() => {
-      alert('You have been using the app for 10 minutes!');
-    }, 10 * 60 * 1000); // 10 minutes = 600000 ms
-  }
+  // showAlertAfter10Minutes() {
+  //   setTimeout(() => {
+  //     alert('You have been using the app for 10 minutes!');
+  //   }, 10 * 60 * 1000); // 10 minutes = 600000 ms
+  // }
 }
 
