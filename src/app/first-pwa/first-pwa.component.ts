@@ -9,15 +9,15 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrl: './first-pwa.component.scss',
 
 })
-export class FirstPwaComponent implements OnInit, OnDestroy {
+export class FirstPwaComponent implements OnInit {
 
   msg: string = '';
   currentTime: string = '';
-  private timeInterval!: any;
-
+  
   ngOnInit() {
     this.setGreeting();
-    this.updateTime();
+    this.getCurrentTime();
+    this.showAlertAfter10Minutes();
   }
 
   setGreeting() {
@@ -31,14 +31,14 @@ export class FirstPwaComponent implements OnInit, OnDestroy {
     }
   }
 
-  updateTime() {
-    this.currentTime = new Date().toLocaleTimeString(); // Set initial time
-    this.timeInterval = setInterval(() => {
-      this.currentTime = new Date().toLocaleTimeString();
-    }, 1000); // Update time every second
+  getCurrentTime() {
+    this.currentTime = new Date().toLocaleTimeString();
   }
 
-  ngOnDestroy() {
-    clearInterval(this.timeInterval); // Clear interval when component is destroyed
+  showAlertAfter10Minutes() {
+    setTimeout(() => {
+      alert('You have been using the app for 10 minutes!');
+    }, 10 * 60 * 1000); // 10 minutes = 600000 ms
   }
 }
+
